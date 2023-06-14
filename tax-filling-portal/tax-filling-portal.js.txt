@@ -1,0 +1,67 @@
+let myFormEl = document.getElementById("myForm");
+let form16El = document.getElementById("form16");
+let payslipEl = document.getElementById("payslip");
+let housingCertificateEl = document.getElementById("housingCertificate");
+let taxInvestmentsEl = document.getElementById("taxInvestments");
+
+let form16ErrMsgEl = document.getElementById("form16ErrMsg");
+let payslipErrMsgEl = document.getElementById("payslipErrMsg");
+let housingCertificateErrMsgEl = document.getElementById("housingCertificateErrMsg");
+let taxInvestmentsErrMsgEl = document.getElementById("taxInvestmentsErrMsg");
+
+function getUserListFromLocalStorage() {
+    let stringifiedUserList = localStorage.getItem("userList");
+    let parsedUserList = JSON.parse(stringifiedUserList);
+    if (parsedUserList === null) {
+        return [];
+    } else {
+        return parsedUserList;
+    }
+}
+
+let userList = getUserListFromLocalStorage();
+let unique_no = userList.length;
+
+function uploadDataToLocalStorage() {
+    let userEnterAllRequiredData = form16El.value !== "" && payslipEl.value !== "" && housingCertificateEl.value !== "" && taxInvestmentsEl.value !== "";
+    if (userEnterAllRequiredData) {
+        let userUploadData = {
+            userId: unique_no + 1,
+            form16: form16El.value,
+            payslip: payslipEl.value,
+            housingCertificate: housingCertificateEl.value,
+            taxInvestments: taxInvestmentsEl.value
+        };
+        userList.push(userUploadData);
+        localStorage.setItem("userList", JSON.stringify(userList));
+    }
+}
+
+function validateFormData() {
+    if (form16El.value === "") {
+        form16ErrMsgEl.textContent = "*Required";
+    } else {
+        form16ErrMsgEl.textContent = "";
+    }
+    if (payslipEl.value === "") {
+        payslipErrMsgEl.textContent = "*Required";
+    } else {
+        payslipErrMsgEl.textContent = "";
+    }
+    if (housingCertificateEl.value === "") {
+        housingCertificateErrMsgEl.textContent = "*Required";
+    } else {
+        housingCertificateErrMsgEl.textContent = "";
+    }
+    if (taxInvestmentsEl.value === "") {
+        taxInvestmentsErrMsgEl.textContent = "*Required";
+    } else {
+        taxInvestmentsErrMsgEl.textContent = "";
+    }
+}
+
+myFormEl.addEventListener("submit", function(event) {
+    event.preventDefault();
+    validateFormData();
+    uploadDataToLocalStorage();
+});

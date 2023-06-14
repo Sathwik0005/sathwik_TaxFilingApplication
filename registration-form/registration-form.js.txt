@@ -1,0 +1,120 @@
+let myFormEl = document.getElementById("myForm");
+
+let nameEl = document.getElementById("name");
+let nameErrMsgEl = document.getElementById("nameErrMsg");
+
+let emailEl = document.getElementById("email");
+let emailErrMsgEl = document.getElementById("emailErrMsg");
+
+let phoneNumberEl = document.getElementById("phoneNumber");
+let phoneNumberErrMsgEl = document.getElementById("phoneNumberErrMsg");
+
+let addressEl = document.getElementById("address");
+let addressErrMsgEL = document.getElementById("addressErrMsg");
+
+let occupationEl = document.getElementById("occupation");
+let otherTextboxEl = document.getElementById("otherOccupationTextbox");
+
+let otherOccupationEl = document.getElementById("otherOccupation");
+let otherOccupationErrMsgEl = document.getElementById("otherOccupationErrMsg");
+
+let salaryPerAnnumnEl = document.getElementById("salaryPerAnnumn");
+let salaryPerAnnumnErrMsgEl = document.getElementById("salaryPerAnnumnErrMsg");
+
+function showOtherTextbox() {
+    if (occupationEl.value === "Other") {
+        otherTextboxEl.classList.remove("d-none");
+
+    } else {
+        otherTextboxEl.classList.add("d-none");
+    }
+}
+
+occupationEl.addEventListener("change", showOtherTextbox);
+
+function validateFormData() {
+    if (nameEl.value === "") {
+        nameErrMsgEl.textContent = "Required*";
+    } else {
+        nameErrMsgEl.textContent = "";
+    }
+    if (emailEl.value === "") {
+        emailErrMsgEl.textContent = "Required*";
+    } else {
+        emailErrMsgEl.textContent = "";
+    }
+    if (phoneNumberEl.value === "") {
+        phoneNumberErrMsgEl.textContent = "Required*";
+    } else {
+        phoneNumberErrMsgEl.textContent = "";
+    }
+    if (addressEl.value === "") {
+        addressErrMsgEL.textContent = "Required*";
+    } else {
+        addressErrMsgEL.textContent = "";
+    }
+    if (otherOccupationEl.value === "") {
+        otherOccupationErrMsgEl.textContent = "Required*";
+    } else {
+        otherOccupationErrMsgEl.textContent = "";
+    }
+    if (salaryPerAnnumnEl.value === "") {
+        salaryPerAnnumnErrMsgEl.textContent = "Required*";
+    } else {
+        salaryPerAnnumnErrMsgEl.textContent = "";
+    }
+}
+
+function getUserListFromLocalStorage() {
+    let stringifiedUserList = localStorage.getItem("userList");
+    let parsedUserList = JSON.parse(stringifiedUserList);
+    if (parsedUserList === null) {
+        return [];
+    } else {
+        return parsedUserList;
+    }
+}
+
+let userList = getUserListFromLocalStorage();
+let unique_no = userList.length;
+
+
+function submitFormData() {
+    if (otherTextboxEl.contains("d-none")) {
+        let userEnterAllRequiredData = nameEl.value !== "" && emailEl.value !== "" && phoneNumberEl.value !== "" && addressEl.value !== "" && salaryPerAnnumnEl.value !== "";
+        if (userEnterAllRequiredData) {
+            let userUploadData = {
+                userId: unique_no + 1,
+                name: nameEl.value,
+                email: emailEl.value,
+                phoneNumber: phoneNumberEl.value,
+                address: addressEl.value,
+                occupation: occupationEl.value,
+                salary: salaryPerAnnumnEl.value
+            };
+            userList.push(userUploadData);
+            localStorage.setItem("userList", JSON.stringify(userList));
+        } else {
+            let userEnterAllRequiredData = nameEl.value !== "" && emailEl.value !== "" && phoneNumberEl.value !== "" && addressEl.value !== "" && otherOccupationEl !== "" && salaryPerAnnumnEl.value !== "";
+            if (userEnterAllRequiredData) {
+                let userUploadData = {
+                    userId: unique_no + 1,
+                    name: nameEl.value,
+                    email: emailEl.value,
+                    phoneNumber: phoneNumberEl.value,
+                    address: addressEl.value,
+                    occupation: otherOccupationEl.value,
+                    salary: salaryPerAnnumnEl.value
+                };
+                userList.push(userUploadData);
+                localStorage.setItem("userList", JSON.stringify(userList));
+            }
+        }
+    }
+}
+
+myFormEl.addEventListener("submit", function(event) {
+    event.preventDefault();
+    validateFormData();
+    submitFormData();
+});

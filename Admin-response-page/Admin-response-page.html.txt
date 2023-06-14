@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <div id="responsesBgContainer">
+        <h1 class="total-responses-heading">16 responses</h1>
+    </div>
+</body>
+
+</html>

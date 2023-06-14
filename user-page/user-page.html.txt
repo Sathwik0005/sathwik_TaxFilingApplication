@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"> </script>
+</head>
+
+<body>
+    <div id="userPageBgContainer" class="user-page-bg-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="https://res.cloudinary.com/dnroew7f3/image/upload/v1686656426/cost_online_3_eqnkut.jpg" class="logo">
+            <a class="navbar-brand navbar-heading" href="#">SecureTaxFile</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active " href="#userPageBgContainer">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">File My Taxes</a>
+                    <a class="nav-item nav-link" href="#footerSection">Follow Us</a>
+                    <a class="nav-item nav-link" href="#contactUsSection">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+        <div class="user-page-sub-container">
+            <div class="user-page-body">
+                <div class="tax-filling-details">
+                    <div class="tax-filling-introduction">
+                        <h1 class="title">Tax Filing in India: Simplifying Your Financial Responsibilities :</h1>
+                        <p class="title-description">
+                            Welcome to our website, where we provide comprehensive information about tax filing in India. Understanding the process of tax filing is essential for individuals, businesses, and organizations operating in the country.
+                            Our goal is to simplify this complex procedure and provide you with the knowledge needed to fulfill your financial responsibilities efficiently. Read on to discover the key aspects of tax filing in India.
+                        </p>
+                        <div class="text-center mb-5">
+                            <img src="https://res.cloudinary.com/dnroew7f3/image/upload/v1686661470/Screenshot_210_cqevz3.png" class="required-documents-image shadow">
+                        </div>
+                    </div>
+                    <div class="tax-filling-body mt-3 mb-5">
+                        <h1 class="title">Types of Taxes:</h1>
+                        <p class="title-description">In India, various types of taxes are levied by the government. The primary ones include:</p>
+                        <div class="tax-filling-cards-section">
+                            <div class="type-of-tax-card shadow">
+                                <h1 class="card-heading">Income Tax</h1>
+                                <p class="card-description">
+                                    This tax is imposed on individuals and entities based on their income from various sources, such as salaries, investments, and businesses.
+                                </p>
+                            </div>
+                            <div class="type-of-tax-card shadow">
+                                <h1 class="card-heading">Goods and Services Tax (GST)</h1>
+                                <p class="card-description">
+                                    GST is a unified indirect tax that replaced multiple indirect taxes such as VAT, excise duty, and service tax. It is levied on the supply of goods and services.
+                                </p>
+                            </div>
+                            <div class="type-of-tax-card shadow">
+                                <h1 class="card-heading">Corporate Tax</h1>
+                                <p class="card-description">
+                                    This tax is imposed on individuals and entities based on their income from various sources, such as salaries, investments, and businesses.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="horizontal-line">
+                    <div class="section-80C-introduction mt-5">
+                        <h1 class="section-80C-title">Understanding Section 80C: Tax Saving Options in India :</h1>
+                        <p class="section-80C-description">
+                            Welcome to our website, where we provide valuable information about Section 80C of the Indian Income Tax Act. Section 80C offers individuals various tax-saving options to reduce their taxable income. Read on to discover how you can optimize your tax planning through Section 80C.
+                        </p>
+                        <div class="text-center mb-4">
+                            <img src="https://res.cloudinary.com/dnroew7f3/image/upload/v1686667786/Eligible-Instruments-under-Section-80C-1_ozfgpi.png" class="required-documents-image">
+                        </div>
+                        <div>
+                            <h1 class="section-80C-sub-title">Overview of Section 80C :</h1>
+                            <p class="section-80C-description">
+                                Section 80C is a provision in the Indian Income Tax Act that allows individuals to claim deductions from their gross total income by investing in specified tax-saving instruments. The maximum deduction limit under this section is ₹1.5 lakh per financial year.
+                            </p>
+                            <h1 class="section-80C-sub-title">Eligible Investments and Expenses :</h1>
+                            <ol>
+                                <li class="section-80C-description">Employee Provident Fund (EPF): Contributions made to EPF by salaried individuals are eligible for tax deductions under Section 80C.</li>
+                                <li class="section-80C-description">Public Provident Fund (PPF): Investments made in PPF accounts are eligible for tax benefits.</li>
+                                <li class="section-80C-description">Life Insurance Premium: Premiums paid for life insurance policies, including term insurance, endowment plans, and unit-linked insurance plans (ULIPs), are eligible for deductions.</li>
+                            </ol>
+                            <h1 class="section-80C-sub-title">Benefits and Impact on Tax Liability :</h1>
+                            <p class="section-80C-description">
+                                Investing in eligible options under Section 80C can significantly reduce your taxable income, resulting in a lower tax liability. The deductions claimed under this section directly reduce your total taxable income, leading to tax savings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerSection" class="footer-section">
+                <div class="follow-us-section">
+                    <div class="pt-5 pb-5" id="followUsSection">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center pb-5">
+                        <div class="follow-us-icon-container">
+                            <a class="fab fa-twitter icon" href="#"></a>
+                        </div>
+                        <div class="follow-us-icon-container">
+                            <a class="fab fa-instagram icon"></a>
+                        </div>
+                        <div class="follow-us-icon-container">
+                            <a class="fab fa-facebook icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="contactUsSection" class="contact-section pt-5 pb-5">
+                    <div class="text-center">
+                        <img src="https://res.cloudinary.com/dnroew7f3/image/upload/v1686656426/cost_online_3_eqnkut.jpg" class="logo" />
+                        <h1 class="contact-section-mail-id">taxfillerxxx@gmail.com</h1>
+                        <p class="contact-section-address">
+                            123 Ayur Vigyan Nagar, New Delhi, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>

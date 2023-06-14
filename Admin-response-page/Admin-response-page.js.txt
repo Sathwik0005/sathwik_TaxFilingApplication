@@ -1,0 +1,43 @@
+let responsesBgContainerEl = document.getElementById("responsesBgContainer");
+
+function getUserListFromLocalStorage() {
+    let stringifiedUserList = localStorage.getItem("userList");
+    let parsedUserList = JSON.parse(stringifiedUserList);
+    if (parsedUserList === null) {
+        return [];
+    } else {
+        return parsedUserList;
+    }
+}
+
+let userList = getUserListFromLocalStorage();
+let unique_no = userList.length;
+
+
+function createAndAppendUserResponse(userData) {
+    let divEl = document.createElement("div");
+    divEl.style.backgroundColor = "#F4F7FC";
+    divEl.style.borderRadius = "25px";
+    divEl.style.padding = "30px";
+    divEl.style.margin = "20px";
+
+
+
+    for (let key in userData) {
+        let headingEL = document.createElement("h1");
+        headingEL.style.fontSize = "20px";
+
+        let paragraphEl = document.createElement("p");
+        paragraphEl.style.fontSize = "15px";
+
+        headingEL.textContent = key;
+        paragraphEl.textContent = userData[key];
+        divEl.appendChild(headingEL);
+        divEl.appendChild(paragraphEl);
+    }
+    responsesBgContainerEl.appendChild(divEl);
+}
+
+for (let eachUser of userList) {
+    createAndAppendUserResponse(eachUser);
+}
